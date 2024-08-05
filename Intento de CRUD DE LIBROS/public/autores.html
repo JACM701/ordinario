@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD de Autores</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Buscar Autores</h1>
+    
+    <h1>Autores</h1>
+    <button onclick="showAddAuthorForm()">Añadir Autor</button>
+    <ul id="autores-list"></ul>
+    <div id="add-author-form" style="display:none;">
+        <h2>Añadir Autor</h2>
+        <form id="add-author">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" required>
+            <label for="apellido">Apellido:</label>
+            <input type="text" name="apellido" required>
+            <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+            <input type="date" name="fecha_nacimiento" required>
+            <button type="submit">Añadir</button>
+        </form>
+    </div>
+
+    <div id="edit-author-form" style="display:none;">
+        <h2>Editar Autor</h2>
+        <form id="edit-author">
+            <input type="hidden" id="edit-author-id">
+            <label for="edit-author-nombre">Nombre:</label>
+            <input type="text" id="edit-author-nombre" name="nombre" required>
+            <label for="edit-author-apellido">Apellido:</label>
+            <input type="text" id="edit-author-apellido" name="apellido" required>
+            <label for="edit-author-fecha_nacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="edit-author-fecha_nacimiento" name="fecha_nacimiento" required>
+            <button type="submit">Guardar Cambios</button>
+        </form>
+    </div>
+</body>
+</html>

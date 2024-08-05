@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD de Libros</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Buscar Libros</h1>
+    <h1>Libros</h1>
+    <button onclick="showAddBookForm()">Añadir Libro</button>
+    <ul id="libros-list"></ul>
+
+    <div id="add-book-form" style="display:none;">
+        <h2>Añadir Libro</h2>
+        <form id="add-book">
+            <label for="titulo">Título:</label>
+            <input type="text" name="titulo" required>
+            <label for="fecha_publicacion">Fecha de Publicación:</label>
+            <input type="date" name="fecha_publicacion" required>
+            <label for="autor_id">ID del Autor:</label>
+            <input type="number" name="autor_id" required>
+            <label for="precio">Precio:</label>
+            <input type="number" step="0.01" name="precio" required>
+            <button type="submit">Añadir</button>
+        </form>
+    </div>
+
+    <div id="edit-book-form" style="display:none;">
+        <h2>Editar Libro</h2>
+        <form id="edit-book">
+            <input type="hidden" id="edit-book-id">
+            <label for="edit-book-titulo">Título:</label>
+            <input type="text" id="edit-book-titulo" name="titulo" required>
+            <label for="edit-book-fecha_publicacion">Fecha de Publicación:</label>
+            <input type="date" id="edit-book-fecha_publicacion" name="fecha_publicacion" required>
+            <label for="edit-book-autor_id">ID del Autor:</label>
+            <input type="number" id="edit-book-autor_id" name="autor_id" required>
+            <label for="edit-book-precio">Precio:</label>
+            <input type="number" step="0.01" id="edit-book-precio" name="precio" required>
+            <button type="submit">Guardar Cambios</button>
+        </form>
+    </div>
+</body>
+</html>
